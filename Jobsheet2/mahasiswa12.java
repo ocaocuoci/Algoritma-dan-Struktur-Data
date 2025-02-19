@@ -1,11 +1,10 @@
 import java.util.Scanner;
 
 public class mahasiswa12 {
-    // Atribut
+
     String nim, nama, kelas;
     double ipk;
 
-    // Konstruktor Default (Tanpa Parameter)
     public mahasiswa12() {
         this.nama = "";
         this.nim = "";

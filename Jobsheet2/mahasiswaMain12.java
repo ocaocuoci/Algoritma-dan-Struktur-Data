@@ -27,5 +27,10 @@ public class mahasiswaMain12 {
        
         mhs2.updateIPK(3.50);
         mhs2.tampilkanInformasi();
+
+        System.out.println();
+
+        mahasiswa12 mhsHernanda = new mahasiswa12("Hernanda Nasution M.", "244107060013", "Teknik Mesin", 3.57);
+        mhsHernanda.tampilkanInformasi();
     }
 }
