@@ -15,9 +15,6 @@ public class mahasiswa12{
         System.out.println("IPK: " + ipk);
         System.out.println("Kelas: " + kelas);
 
-        System.out.print("input ipk anda: ");
-        double inputIPK = sc.nextDouble();
-        updateIPK(inputIPK);
     }
     public static void ubahKelas(String kelasBaru){
         kelas = kelasBaru;
