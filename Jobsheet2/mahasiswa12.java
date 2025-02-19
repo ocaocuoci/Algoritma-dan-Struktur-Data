@@ -40,13 +40,5 @@ public class mahasiswa12{
             return "Kinerja Kurang";
         }
     }
-    public static mahasiswa(){
-
-    }
-    public static mahasiswa(String nm, String nim, String kelas, Double ipk){
-        nama = nm;
-        this.nim = nim;
-        this.ipk = ipk;
-        kelas = kls;
-    }
+    
 }
