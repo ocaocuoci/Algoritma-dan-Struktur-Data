@@ -11,8 +11,8 @@ public class mahasiswaMain12{
         mhs1.tampilkanInformasi();
 
 
-        mhs1.ubahKelas("SIB 1C");
-        mhs1.updateIPK(3.90);
+        mhs1.ubahKelas("SIB 1J");
+        mhs1.updateIPK(3.89);
         mhs1.tampilkanInformasi();
     }
 }
