@@ -33,5 +33,12 @@ public class MataKuliahDemo{
             System.out.println("-----------------------------------------------");
         }
 
+        MataKuliah mk1 = new MataKuliah("MK001", "Pemrograman Java", 4, 3);
+        
+        MataKuliah mk2 = new MataKuliah("MK002", "Basis Data");
+
+        mk1.display();
+        mk2.display();
+
     }
 }
