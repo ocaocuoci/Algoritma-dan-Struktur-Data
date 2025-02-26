@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 class MataKuliah {
     String kode;
     String nama;
