@@ -3,12 +3,16 @@ public class MataKuliahDemo{
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
-        MataKuliah[] arrayOfMataKuliah = new MataKuliah[3];
+
+        System.out.print("Masukkan jumlah mata kuliah yang ingin diinput: ");
+        int jumlahMatkul = Integer.parseInt(sc.nextLine());
+
+        MataKuliah[] arrayOfMataKuliah = new MataKuliah[jumlahMatkul];
 
         String kode, nama, dummy;
         int sks, jumlahJam;
 
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < jumlahMatkul; i++){
             System.out.println("Mahasiswa Data Mata Kuliah ke-" + (i+1));
             System.out.print("Kode              : ");
             kode = sc.nextLine();
@@ -27,7 +31,7 @@ public class MataKuliahDemo{
         }
         
 
-       for(int i = 0; i<3; i++){
+       for(int i = 0; i<jumlahMatkul; i++){
             System.out.println("Data Mata Kuliah ke-" + (i+1));
             System.out.println("Kode        :" + arrayOfMataKuliah[i].kode);
             System.out.println("Nama        :" + arrayOfMataKuliah[i].nama);
@@ -37,7 +41,7 @@ public class MataKuliahDemo{
             System.out.println("-----------------------------------------------");
         } 
 
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < jumlahMatkul; i++){
             System.out.println("Data Mata Kuliah ke-" + (i+1));
             arrayOfMataKuliah[i].cetakInfo();
         }
