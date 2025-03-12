@@ -5,10 +5,10 @@ public class Pangkat12{
         this.n = n;
         this.p = p;
     }
-    public int pangkatBF(int a, int n){
+    public int pangkatBF(){
         int hasil = 1;
-        for(int i=0; i<n; i++){
-            hasil = hasil*a;
+        for(int i=0; i< this.p; i++){
+            hasil *= this.n;
         }
         return hasil;
     }
