@@ -10,5 +10,6 @@ public class MainFaktorial12{
         Faktorial12 fk = new Faktorial12();
         System.out.println("Nilai faktorial " + nilai + " menggunakan Brute Force: " + fk.faktorialBF(nilai));
         System.out.println("Nilai faktorial " + nilai + " menggunakan Devide conquer: " + fk.faktorialDC(nilai));
+        System.out.println("Hasil Faktorial dengan WHILE loop: " + fk.faktorialBFWhile(nilai));
     }
 }
