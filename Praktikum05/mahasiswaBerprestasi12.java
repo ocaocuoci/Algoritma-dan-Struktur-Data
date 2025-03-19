@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 class mahasiswaBerprestasi12 {
     ArrayList<mahasiswa12> listMhs = new ArrayList<>();
 
