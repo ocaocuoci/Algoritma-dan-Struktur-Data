@@ -1,5 +1,3 @@
-
-
 class mahasiswa12 {
     String nim, nama, kelas;
     double ipk;

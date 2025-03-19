@@ -1,28 +1,64 @@
-import java.util.ArrayList;
 class mahasiswaBerprestasi12 {
-    ArrayList<mahasiswa12> listMhs = new ArrayList<>();
+    mahasiswa12[] listMhs;
+    int idx;
+
+    mahasiswaBerprestasi12(int jumlah) {
+        listMhs = new mahasiswa12[jumlah];
+        idx = 0;
+    }
 
     void tambah(mahasiswa12 m) {
-        listMhs.add(m);
+        if (idx < listMhs.length) {
+            listMhs[idx] = m;
+            idx++;
+        } else {
+            System.out.println("Data sudah penuh!");
+        }
     }
 
     void tampil() {
-        for (mahasiswa12 m : listMhs) {
-            m.tampilInformasi();
+        for (int i = 0; i < idx; i++) {
+            listMhs[i].tampilInformasi();
             System.out.println("---------------------------");
         }
     }
 
     void bubbleSort() {
-        int n = listMhs.size();
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 1; j < n - i; j++) {
-                if (listMhs.get(j).ipk > listMhs.get(j - 1).ipk) {
-                    mahasiswa12 tmp = listMhs.get(j);
-                    listMhs.set(j, listMhs.get(j - 1));
-                    listMhs.set(j - 1, tmp);
+        for (int i = 0; i < idx - 1; i++) {
+            for (int j = 1; j < idx - i; j++) {
+                if (listMhs[j].ipk > listMhs[j - 1].ipk) {
+                    mahasiswa12 tmp = listMhs[j];
+                    listMhs[j] = listMhs[j - 1];
+                    listMhs[j - 1] = tmp;
                 }
             }
         }
     }
+
+    void selectionSort(){
+        for(int i=0; i<listMhs.length-1; i++){
+            int idxMin=i;
+            for(int j=i+1; j<listMhs.length; j++){
+                if(listMhs[j].ipk<listMhs[idxMin].ipk){
+                    idxMin=j;
+                }
+            }
+            mahasiswa12 tmp = listMhs[idxMin];
+            listMhs[idxMin]=listMhs[i];
+            listMhs[i]=tmp;
+        }
+    }
+
+    void insertionSort(){
+        for(int i=1; i<listMhs.length; i++){
+            mahasiswa12 temp = listMhs[i];
+            int j=i;
+            while(j<0 && listMhs[j-1].ipk>temp.ipk){
+                listMhs[j]=listMhs[j-1];
+                j--;
+            }
+            listMhs[j]=temp;
+        }
+    }
+
 }
