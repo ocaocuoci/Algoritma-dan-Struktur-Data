@@ -34,6 +34,15 @@ public class mahasiswaDemo12 {
         int pss = (int)posisi;
         list.tampilPosisi(cari, pss);
         list.tampilDataSearch(cari, pss);
+
+        System.out.println("----------------------------------");
+        System.out.println("menggunakan binary search");
+        System.out.println("----------------------------------");
+        int left =0;
+        double posisi2 = list.findBinarySearch(cari, left, jumMhs-1);
+        int pss2 = (int)posisi2;
+        list.tampilPosisi(cari, pss2);
+        list.tampilDataSearch(cari, pss2);
         
 
         System.out.println("\nData mahasiswa sebelum sorting: ");
