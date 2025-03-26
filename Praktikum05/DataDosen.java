@@ -74,11 +74,25 @@ public class DataDosen {
         SortingASC();
         int left =0, right =idx-1;
         boolean found = false;
+        int count =0;
+
         while (left<=right){
             int mid = left + (right - left)/2;
             if(dataDosen[mid].usia == usia){
                 System.out.println("Data dosen ditemukan: ");
-                dataDosen[mid].tampil();
+                int i = mid;
+                
+                while (i>=0 && dataDosen[i].usia == usia){
+                    dataDosen[i].tampil();
+                    count++;
+                    i--;
+                }
+                i = mid+1;
+                while(i< idx && dataDosen[i].usia == usia){
+                    dataDosen[i].tampil();
+                    count++;
+                    i++;
+                }
                 found = true;
                 break;
             }
@@ -91,6 +105,9 @@ public class DataDosen {
         }
         if(!found){
             System.out.println("Data dosen dengan usia " + usia + " tidak ditemukan!");
+        } 
+        else if(count > 1){
+            System.out.println("Peringatan: Terdapat lebih dari satu data dosen\n dengan usia yang sama!");
         }
     }
 }
