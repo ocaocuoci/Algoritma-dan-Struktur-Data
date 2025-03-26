@@ -11,7 +11,8 @@ public class DosenMain {
             System.out.println("3. Sorting ASC (Bubble Sort)");
             System.out.println("4. Sorting DSC (Selection Sort)");
             System.out.println("5. Sorting DSC (Insertion Sort)");
-            System.out.println("6. Keluar");
+            System.out.println("6. Cari Dosen berdasarkan Nama: ");
+            System.out.println("7. Keluar");
             System.out.print("Pilih menu: ");
             int pilihan = sc.nextInt();
             sc.nextLine();
@@ -59,6 +60,11 @@ public class DosenMain {
                     daftarDosen.tampil();
                     break;
                 case 6:
+                    System.out.print("Masukkan nama dosen yang dicari: ");
+                    String namaCari = sc.nextLine();
+                    daftarDosen.pencarianDataSequensial(namaCari);
+                    break;
+                case 7:
                     System.out.println("Keluar dari program...");
                     sc.close();
                     return;

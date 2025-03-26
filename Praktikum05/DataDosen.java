@@ -54,4 +54,19 @@ public class DataDosen {
             dataDosen[j] = temp;
         }
     }
+
+    public void pencarianDataSequensial(String nama){
+        boolean found = false;
+        for(int i =0; i< idx; i++){
+            if(dataDosen[i].nama.equalsIgnoreCase(nama)){
+                System.out.println("Data dosen ditemukan: ");
+                dataDosen[i].tampil();
+                found = true;
+                break;
+            }
+        }
+        if(!found){
+            System.out.println("Data dosen dengan nama " + nama + " tidak ditemukan!");
+        }
+    }
 }
