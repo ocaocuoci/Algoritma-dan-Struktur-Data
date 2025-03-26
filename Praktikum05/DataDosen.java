@@ -55,7 +55,7 @@ public class DataDosen {
         }
     }
 
-    public void pencarianDataSequensial(String nama){
+    public void pencarianDataSequensial12(String nama){
         boolean found = false;
         for(int i =0; i< idx; i++){
             if(dataDosen[i].nama.equalsIgnoreCase(nama)){
@@ -67,6 +67,30 @@ public class DataDosen {
         }
         if(!found){
             System.out.println("Data dosen dengan nama " + nama + " tidak ditemukan!");
+        }
+    }
+
+    public void pencarianDataBinary12(int usia){
+        SortingASC();
+        int left =0, right =idx-1;
+        boolean found = false;
+        while (left<=right){
+            int mid = left + (right - left)/2;
+            if(dataDosen[mid].usia == usia){
+                System.out.println("Data dosen ditemukan: ");
+                dataDosen[mid].tampil();
+                found = true;
+                break;
+            }
+            else if(dataDosen[mid].usia < usia){
+                left = mid+1;
+            }
+            else{
+                right = mid -1;
+            }
+        }
+        if(!found){
+            System.out.println("Data dosen dengan usia " + usia + " tidak ditemukan!");
         }
     }
 }
