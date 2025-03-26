@@ -2,8 +2,11 @@ import java.util.Scanner;
 public class mahasiswaDemo12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        System.out.print("masukkan jumlah mahasiswa yang akan diinput: ");
+        int jumMhs = sc.nextInt();
+        sc.nextLine();
         
-        int jumMhs = 5;
 
         mahasiswaBerprestasi12 list = new mahasiswaBerprestasi12(jumMhs);
 
