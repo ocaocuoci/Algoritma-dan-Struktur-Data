@@ -1,6 +1,31 @@
+import java.util.Scanner;
 public class SLLMain12{
     public static void main (String[]args){
         SingleLinkedList12 sll = new SingleLinkedList12();
+        Scanner sc = new Scanner(System.in);
+
+        sll.print();
+
+        System.out.print("Masukkan jumlah mahasiswa:");
+        int jumlahMahasiswa = sc.nextInt();
+        sc.nextLine(); 
+
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            System.out.println("\nMasukkan data mahasiswa ke-" + (i + 1) + ":");
+            System.out.print("Nim: ");
+            String nim = sc.nextLine();
+            System.out.print("Nama: ");
+            String nama = sc.nextLine();
+            System.out.print("Kelas: ");
+            String kelas = sc.nextLine();
+            System.out.print("IPK: ");
+            double ipk = sc.nextDouble();
+            sc.nextLine(); 
+
+            Mahasiswa12 mahasiswa = new Mahasiswa12(nim, nama, kelas, ipk);
+            sll.addLast(mahasiswa);
+            sll.print();
+        }
 
         Mahasiswa12 mhs1 = new Mahasiswa12("244107060075", "Dirga", "4D", 3.6);
         Mahasiswa12 mhs2 = new Mahasiswa12("244107060056", "Alvaro", "1A", 4.0);
@@ -18,5 +43,6 @@ public class SLLMain12{
 
         sll.insertAt(3, mhs4);
         sll.print();
+
     }
 }
