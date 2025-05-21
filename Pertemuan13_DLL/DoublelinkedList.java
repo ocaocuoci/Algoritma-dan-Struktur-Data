@@ -62,11 +62,16 @@ public class DoublelinkedList{
     }
 
     public void print(){
-        Node01 current = head;
-        while(current != null){
+        if(isEmpty()){
+            System.out.println("Linked list masih kosong");
+        } else{
+            Node01 current = head;
+            while(current != null){
             current.data.tampil();
             current = current.next;
+            }
         }
+        
     }
 
     public void removeFirst(){
