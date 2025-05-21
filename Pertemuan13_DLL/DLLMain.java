@@ -18,6 +18,9 @@ public class DLLMain {
             System.out.println("8. Tambah di indeks tertentu");
             System.out.println("9. Hapus setelah NIM tertentu");
             System.out.println("10. Hapus data pada indeks tertentu");
+            System.out.println("11. Tampilkan data pertama (head)");
+            System.out.println("12. Tampilkan data terakhir (tail)");
+            System.out.println("13. Tampilkan data pada indeks terntentu");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scan.nextInt();
@@ -87,6 +90,21 @@ public class DLLMain {
                     index = scan.nextInt();
                     scan.nextLine();
                     list.remove(index);
+                    break;
+
+                case 11:
+                    list.getFirst();
+                    break;
+                
+                case 12:
+                    list.getLast();
+                    break;
+                
+                case 13:
+                    System.out.print("Masukkan index data yang ingin ditampilkan: ");
+                    index = scan.nextInt();
+                    scan.nextLine();
+                    list.getIndex(index);
                     break;
 
                 case 0:

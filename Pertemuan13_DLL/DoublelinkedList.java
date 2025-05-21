@@ -206,6 +206,42 @@ public class DoublelinkedList{
         current.data.tampil();
     }
 
+    public void getFirst() {
+        if (!isEmpty()) {
+            System.out.println("Data pertama:");
+            head.data.tampil();
+        } else {
+            System.out.println("List kosong.");
+        }
+    }
+
+    public void getLast() {
+        if (!isEmpty()) {
+            System.out.println("Data terakhir:");
+            tail.data.tampil();
+        } else {
+            System.out.println("List kosong.");
+        }
+    }
+
+    public void getIndex(int index) {
+        if (index < 0) {
+            System.out.println("Index tidak valid.");
+            return;
+        }
+
+        Node01 current = head;
+        for (int i = 0; i < index && current != null; i++) {
+            current = current.next;
+        }
+
+        if (current != null) {
+            System.out.println("Data pada index " + index + ":");
+            current.data.tampil();
+        } else {
+            System.out.println("Index melebihi ukuran list.");
+        }
+    }
 
 
 }
