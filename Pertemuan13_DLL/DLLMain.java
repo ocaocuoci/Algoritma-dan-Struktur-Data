@@ -14,6 +14,7 @@ public class DLLMain {
             System.out.println("4. Hapus di Akhir");
             System.out.println("5. Tampilkan Data");
             System.out.println("6. Cari Mahasiswa berdasarkan NIM");
+            System.out.println("7. Tambah setelah NIM tertentu: ");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scan.nextInt();
@@ -32,13 +33,13 @@ public class DLLMain {
                     break;
                 }
 
-                case 3:
+                /* case 3:
                     list.removeFirst();
                     break;
 
                 case 4:
                     list.removeLast();
-                    break;
+                    break; */
 
                 case 5:
                     list.print();
@@ -56,6 +57,13 @@ public class DLLMain {
                     }
                     break;
                 }
+
+                case 7:
+                    System.out.print("Masukkan NIM setelah data ini ingin disisipkan: ");
+                    String keyNim = scan.nextLine();
+                    Mahasiswa01 mhs = inputMahasiswa(scan);
+                    list.insertAfter(keyNim, mhs);
+                    break;
 
                 case 0:
                     System.out.println("Keluar dari program.");
