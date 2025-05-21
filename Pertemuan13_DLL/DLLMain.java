@@ -21,6 +21,7 @@ public class DLLMain {
             System.out.println("11. Tampilkan data pertama (head)");
             System.out.println("12. Tampilkan data terakhir (tail)");
             System.out.println("13. Tampilkan data pada indeks terntentu");
+            System.out.println("14. Tampilkan jumlah data (size)");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scan.nextInt();
@@ -105,6 +106,10 @@ public class DLLMain {
                     index = scan.nextInt();
                     scan.nextLine();
                     list.getIndex(index);
+                    break;
+
+                case 14:
+                    System.out.println("Jumlah data dalam list: " + list.jumlah());
                     break;
 
                 case 0:

@@ -243,5 +243,14 @@ public class DoublelinkedList{
         }
     }
 
+        public int jumlah() {
+        int count = 0;
+        Node01 current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
 
 }
