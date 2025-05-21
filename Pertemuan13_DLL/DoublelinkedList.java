@@ -118,4 +118,38 @@ public class DoublelinkedList{
     }
     return null;
     }
+
+    public void add(int index, Mahasiswa01 data) {
+        if (index < 0) {
+            System.out.println("Indeks tidak valid.");
+            return;
+        }
+
+        if (index == 0) {
+            addFirst(data);
+            return;
+        }
+
+        Node01 current = head;
+        for (int i = 0; i < index - 1 && current != null; i++) {
+            current = current.next;
+        }
+
+        if (current == null) {
+            System.out.println("Indeks melebihi ukuran list.");
+            return;
+        }
+
+        Node01 newNode = new Node01(data);
+        newNode.next = current.next;
+        newNode.prev = current;
+
+        if (current.next != null) {
+            current.next.prev = newNode;
+        } else {
+            tail = newNode;
+        }
+        current.next = newNode;
+    }
+
 }
