@@ -69,31 +69,6 @@ public class DoublelinkedList{
         }
     }
 
-    public void removeFirst(){
-        if(isEmpty()){
-            System.out.println("Linked List masih kosong, tidak dapat dihapus!");
-        } else if(head == tail){
-            head = tail = null;
-        } else{
-            head = head.next;
-        }
-    }
-
-    public void removeLast(){
-        if(isEmpty()){
-            System.out.println("Linked List masih kosong, tidak dapat dihapus!");
-        } else if(head == tail){
-            head = tail = null;
-        } else{
-            Node01 temp = head;
-            while(temp.next != tail){
-                temp = temp.next;
-            }
-            temp.next = null;
-            tail = temp;
-        }
-    }
-
     public Node01 search(String nim) {
     Node01 current = head;
     while (current != null) {
