@@ -73,9 +73,14 @@ public class DoublelinkedList{
         if(isEmpty()){
             System.out.println("List masih kosong, tidak dapat dihapus!");
         } else if(head == tail){
+            System.out.println("Data sudah berhasil dihapus. Data yan terhapus adalah ");
+            head.data.tampil();
             head = tail = null;
         } else{
+            System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah ");
+            head.data.tampil();
             head = head.next;
+            head.prev = null;
         }
     }
 
@@ -83,8 +88,12 @@ public class DoublelinkedList{
         if(isEmpty()){
             System.out.println("List masih kosong, tidak dapat dihapus!");
         } else if(head == tail){
+            System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah ");
+            tail.data.tampil();
             head = tail = null;
         } else{
+            System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah ");
+            tail.data.tampil();
             Node01 temp = head;
             while(temp.next != tail){
                 temp = temp.next;
