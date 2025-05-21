@@ -10,6 +10,6 @@ public class Mahasiswa01{
     }
 
     public void tampil(){
-        System.out.print("NIM: " + nim + " - Nama: " + nama + " - Kelas: " + kelas + " - IPK:" + ipk);
+        System.out.print("NIM: " + nim + " - Nama: " + nama + " - Kelas: " + kelas + " - IPK: " + ipk);
     }
 }
