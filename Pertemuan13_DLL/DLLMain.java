@@ -17,6 +17,7 @@ public class DLLMain {
             System.out.println("7. Tambah setelah NIM tertentu");
             System.out.println("8. Tambah di indeks tertentu");
             System.out.println("9. Hapus setelah NIM tertentu");
+            System.out.println("10. Hapus data pada indeks tertentu");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scan.nextInt();
@@ -79,6 +80,13 @@ public class DLLMain {
                     System.out.print("Masukkan NIM yang datanya ingin dihapus setelahnya: ");
                     keyNim = scan.nextLine();
                     list.removeAfter(keyNim);
+                    break;
+
+                case 10:
+                    System.out.print("Masukkan indeks yang ingin dihapus: ");
+                    index = scan.nextInt();
+                    scan.nextLine();
+                    list.remove(index);
                     break;
 
                 case 0:

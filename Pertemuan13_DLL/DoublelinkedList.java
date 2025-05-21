@@ -177,5 +177,35 @@ public class DoublelinkedList{
         nodeToRemove.data.tampil();
     }
 
+    public void remove(int index) {
+        if (index < 0 || isEmpty()) {
+            System.out.println("Index tidak valid atau list kosong.");
+            return;
+        }
+
+        if (index == 0) {
+            removeFirst();
+            return;
+        }
+
+        Node01 current = head;
+        for (int i = 0; i < index && current != null; i++) {
+            current = current.next;
+        }
+
+        if (current == null) {
+            System.out.println("Index melebihi ukuran list.");
+            return;
+        }
+
+        if (current.prev != null) current.prev.next = current.next;
+        if (current.next != null) current.next.prev = current.prev;
+        if (current == tail) tail = current.prev;
+
+        System.out.println("Data pada index " + index + " berhasil dihapus:");
+        current.data.tampil();
+    }
+
+
 
 }
