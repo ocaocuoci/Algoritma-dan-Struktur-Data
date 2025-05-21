@@ -33,13 +33,13 @@ public class DLLMain {
                     break;
                 }
 
-                /* case 3:
+                case 3:
                     list.removeFirst();
                     break;
 
                 case 4:
                     list.removeLast();
-                    break; */
+                    break;
 
                 case 5:
                     list.print();
