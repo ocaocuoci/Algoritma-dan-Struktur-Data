@@ -152,4 +152,30 @@ public class DoublelinkedList{
         current.next = newNode;
     }
 
+    public void removeAfter(String keyNim) {
+    Node01 current = head;
+
+        while (current != null && !current.data.nim.equals(keyNim)) {
+            current = current.next;
+        }
+
+        if (current == null || current.next == null) {
+            System.out.println("Data setelah NIM tidak ditemukan.");
+            return;
+        }
+
+        Node01 nodeToRemove = current.next;
+        current.next = nodeToRemove.next;
+
+        if (nodeToRemove.next != null) {
+            nodeToRemove.next.prev = current;
+        } else {
+            tail = current;
+        }
+
+        System.out.println("Data setelah NIM " + keyNim + " berhasil dihapus: ");
+        nodeToRemove.data.tampil();
+    }
+
+
 }
