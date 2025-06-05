@@ -1,23 +1,26 @@
 public class QueueTransaksi{
-   public  TransaksiLayanan[] data;
-   public  int front, rear, size;
+   public  TransaksiLayanan[] data; // menyimpan objek trans
+   public  int front, rear, size; 
+   /*
+   f&r posisi elemen first n last dlm queue n size menyimpan jml elemen rn
+   */
 
     public QueueTransaksi(int kapasitas){
-        data = new TransaksiLayanan[kapasitas];
+        data = new TransaksiLayanan[kapasitas]; // membuat array dg kapasitas tertntu
         front = rear = size = 0;
     }
 
-    public void enqueue(TransaksiLayanan t){
-       if (size < data.length) {
-            data[rear] = t;
-            rear = (rear + 1) % data.length;
+    public void enqueue(TransaksiLayanan t){ //menmabhakan data ke antrian
+       if (size < data.length) { //cek ruang kosong
+            data[rear] = t; //menempatkan data t ke indeks terakhir
+            rear = (rear + 1) % data.length; //menggeser pointer r ke pss brktnya
             size++;
-        } else{
+        } else{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
             System.out.println("Riwayat transaksi penuh!");
         }
     }
 
-    public void tampilkanTransaksi() {
+    public void tampilkanTransaksi() { // menampilkan data transaksi
        if (size == 0) {
             System.out.println("Belum ada riwayat transaksi.");
             return;
@@ -25,8 +28,8 @@ public class QueueTransaksi{
         System.out.println();
         System.out.println("-- Riwayat Transaksi --");
         System.out.println("Daftar Transaksi");
-        int i = front;
-        for (int j = 0; j < size; j++) {
+        int i = front; //menunjuk indek pertama (fifo) maka pakai front
+        for (int j = 0; j < size; j++) { //looping
             data[i].tampilkanTraksaksi();
             i = (i + 1) % data.length;
         }

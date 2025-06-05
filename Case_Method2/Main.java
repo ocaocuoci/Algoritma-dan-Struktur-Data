@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class Main{
     public static void main(String [] args){
-        AntrianPasien antrian = new AntrianPasien();
-        QueueTransaksi riwayat = new QueueTransaksi(100);
+        AntrianPasien antrian = new AntrianPasien(); //inisialisasi objek
+        QueueTransaksi riwayat = new QueueTransaksi(100); // inisialasi objek, menyimpan riwayat layanan dlm array queue
         Scanner sc = new Scanner(System.in);
         int pilihan;
 
@@ -19,30 +19,30 @@ public class Main{
             sc.nextLine(); 
 
             switch(pilihan){
-                case 1: {
-                    System.out.print("Nama Paien\t: ");
+                case 1: { //menerima inputan
+                    System.out.print("Nama Pasien\t: ");
                     String nama = sc.nextLine();
                     System.out.print("NIK\t\t: ");
                     String nik = sc.nextLine();
                     System.out.print("Keluhan\t\t: ");
                     String keluhan = sc.nextLine();
-                    antrian.tambahPasien(new Pasien(nama, nik, keluhan));
+                    antrian.tambahPasien(new Pasien(nama, nik, keluhan)); //memanggil method 
                     System.out.print(">> Pasien masuk ke dalam antrian.");
                     System.out.println();
                     break;
                 }
 
-                case 2: {
+                case 2: { //menampilkan semua pasien
                     System.out.println("--- Antrian Pasien ---");
                     antrian.tampilkanAntrian();
                     break;
                 }
 
-                case 3:
-                    if (antrian.isEmpty()) {
+                case 3: 
+                    if (antrian.isEmpty()) { //cek antrian 
                         System.out.println("Tidak ada pasien dalam antrian.");
                         
-                    } else {
+                    } else { 
                     Pasien p = antrian.layaniPasien();
                     System.out.println("Pasien " + p.nama + " dipanggil");
                     System.out.println();
@@ -55,7 +55,7 @@ public class Main{
                     int durasi = sc.nextInt();
                     sc.nextLine();
 
-                    Dokter d = new Dokter(idDok, namaDok);
+                    Dokter d = new Dokter(idDok, namaDok); //buat objek
                     TransaksiLayanan t = new TransaksiLayanan(p, d, durasi);
                     riwayat.enqueue(t);
 
@@ -64,11 +64,11 @@ public class Main{
                     }
                     break;
 
-                case 4:
+                case 4: //hitung sisa pasien
                     System.out.println(">> Sisa pasien dalam antrian: " + antrian.hitungSisa());
                     break;
 
-                case 5:
+                case 5: //menampilkan riwayat transaksi
                     riwayat.tampilkanTransaksi();
                     break;
 
@@ -84,13 +84,13 @@ public class Main{
         } while(pilihan != 0);
     }
 
-    static int hitungSisaPasien(AntrianPasien antrian) {
+    /*tatic int hitungSisaPasien(AntrianPasien antrian) { //menghitung jml node pasien scr manual
         int count = 0;
         Node temp = antrian.head;
         while (temp != null) {
             count++;
             temp = temp.next;
         }
-        return count;
-    }
+        return count; 
+    } */
 }
