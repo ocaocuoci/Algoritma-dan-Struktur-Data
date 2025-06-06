@@ -164,7 +164,7 @@ public class BinaryTree12{
 
     public void addRekursif(Mahasiswa12 mhs) {
     root = addRekursif(root, mhs);
-}
+    }
 
     Node12 addRekursif(Node12 current, Mahasiswa12 mhs) {
         if (current == null) {
