@@ -11,7 +11,7 @@ public class DemoArrayList{
 
         customers.add(new Customer(4, "Cica"));
 
-        customers.add(2, new Customer(100, "Rossa"));
+        customers.add(new Customer(100, "Rossa"));
 
         System.out.println(customers.indexOf(customer2));
 
