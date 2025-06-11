@@ -26,5 +26,7 @@ public class StackDemo{
         for(Book book : books){
             System.out.println(book.toString());
         }
+
+        System.out.println(books);
     }
 }
