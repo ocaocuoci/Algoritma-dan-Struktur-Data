@@ -26,6 +26,8 @@ public class DemoArrayList{
 
         customers.addAll(newCustomers);
 
+        System.out.println(customers);
+
         for(Customer cust : customers){
             System.out.println(cust.toString());
         }
