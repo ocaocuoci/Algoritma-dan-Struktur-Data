@@ -2,20 +2,24 @@ import java.util.ArrayList;
 public class DemoArrayList{
     public static void main(String[] args){
 
-        ArrayList<Customer> customer = new ArrayList<>(2);
+        ArrayList<Customer> customers = new ArrayList<>(2);
         Customer customer1 = new Customer(1, "Zaskia");
         Customer customer2 = new Customer(5, "Budi");
 
-        customer.add(customer1);
-        customer.add(customer2);
+        customers.add(customer1);
+        customers.add(customer2);
 
-        customer.add(new Customer(4, "Cica"));
+        customers.add(new Customer(4, "Cica"));
 
-        customer.add(2, new Customer(100, "Rossa"));
+        customers.add(2, new Customer(100, "Rossa"));
 
-        System.out.println(customer.indexOf(customer2));
+        System.out.println(customers.indexOf(customer2));
 
-        for(Customer cust : customer){
+        Customer customer = customers.get(1);
+        System.out.println(customer.name);
+        customer.name = "Budi Utomo";
+
+        for(Customer cust : customers){
             System.out.println(cust.toString());
         }
     }
