@@ -11,6 +11,8 @@ public class DemoArrayList{
 
         customer.add(new Customer(4, "Cica"));
 
+        customer.add(2, new Customer(100, "Rossa"));
+
         for(Customer cust : customer){
             System.out.println(cust.toString());
         }
