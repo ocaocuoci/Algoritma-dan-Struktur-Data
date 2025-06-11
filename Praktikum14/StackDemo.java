@@ -5,7 +5,7 @@ public class StackDemo{
         Book book1 = new Book("1234", "Dasar Pemrograman");
         Book book2 = new Book("7145", "Hafalan Shalat Delisa");
         Book book3 = new Book("3562", "Muhammad Al-Fatih");
-
+        Book target = new Book("456", "Python");
         Stack<Book> books = new Stack<>();
         books.push(book1);
         books.push(book2);
@@ -28,5 +28,10 @@ public class StackDemo{
         }
 
         System.out.println(books);
+
+        
+
+        int position = books.search(target);
+        System.out.println("Posisi dari atas: " + position);
     }
 }
